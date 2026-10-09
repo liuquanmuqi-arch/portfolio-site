@@ -2,12 +2,13 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>木﨑 瑠泉</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rui Kizaki</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-            <a href="#top">木﨑 瑠泉</a>
+        <header class="site-header">
+            <a href="#top">Rui Kizaki</a>
             <nav>
                 <a href="#about">About</a>
                 <a href="#works">Works</a>
@@ -17,31 +18,40 @@
             <section id="top">
                 <img src="./media/top_s.jpg" width="80%" alt="キービジュアル">
                 <h1>
-                    木﨑 瑠泉<br>
+                    Rui Kizaki<br>
                     Portfolio
                 </h1>
+                <p id="weather-icon"> </p>
             </section>
             <section id="about">
                 <h3>About</h3>
                 <p>
-                    木﨑 瑠泉<br>
+                    Rui Kizaki<br>
                     東京都市大学デザイン・データ科学部
                 </p>
                 <p>
                     専門：ウェルビーイング研究、データサイエンス<br>
-                    スキル：HTML/CSS/Python
+                    スキル：HTML/CSS/JavaScript/Python
                 </p>
             </section>
-            <section id="works">
+            <section id="works" class="works">
                 <h3>Works</h3>
-                <ul>
-                    <li class="work-ramen">ラーメン店マップアプリ</li>
-                    <li class="work-poster">授業内OPポスター</li>
-                </ul>
+                <div class="works-controls">
+                    <select id="category">
+                        <option value="all">すべてのカテゴリ</option>
+                    </select>
+                    <select id="sort">
+                        <option value="new">新しい順</option>
+                        <option value="old">古い順</option>
+                        <option value="title">タイトル順</option>
+                    </select>
+                </div>
+                <div id="works-grid"></div>
             </section>
         </main>
         <footer>
-            <span>© 2026 木﨑 瑠泉</span>
+            <span>© 2026 Rui Kizaki</span>
         </footer>
+        <script src="works.js"></script>
     </body>
 </html>
